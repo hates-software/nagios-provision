@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -e
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && cd .. && pwd )"
+cd "$DIR"
+
+export PATH=/usr/share/rbenv/shims:$PATH
+export RBENV_VERSION="$(cat .ruby-version)"
+rm -rf "${DIR}/.bundle"
+
+# bundle package
+bundle config set --local path 'vendor/gems'
+bundle install --local
+
+bundle binstubs --force rake

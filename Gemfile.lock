@@ -1,0 +1,23 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    minitest (5.15.0)
+    net-ssh (3.2.0)
+    rake (13.0.6)
+    ruby_expect (1.7.5)
+    tracer (0.1.1)
+    yaml (0.2.1)
+
+PLATFORMS
+  x86_64-darwin-19
+
+DEPENDENCIES
+  minitest
+  net-ssh (~> 3.2)
+  rake
+  ruby_expect
+  tracer
+  yaml
+
+BUNDLED WITH
+   2.2.25
